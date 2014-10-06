@@ -103,7 +103,7 @@ Testing
 -------
 
 * Avoid `any_instance` in rspec-mocks and mocha. Prefer [dependency injection].
-* Avoid `its`, `let`, `let!`, `specify`, `before`, and `subject` in RSpec.
+* Avoid `its`, `let`, `let!`, `specify`, `before`, and `subject` in RSpec. ([Let's Not], [Better Acceptance Tests with Page Objects])
 * Avoid using instance variables in tests.
 * Disable real HTTP requests to external services with
   `WebMock.disable_net_connect!`.
@@ -124,6 +124,8 @@ Testing
 [assertions about state]: https://speakerdeck.com/skmetz/magic-tricks-of-testing-railsconf?slide=51
 [Fake]: http://robots.thoughtbot.com/post/219216005/fake-it
 [SUT]: http://xunitpatterns.com/SUT.html
+[Let's Not]: http://robots.thoughtbot.com/lets-not
+[Better Acceptance Tests with Page Objects]: http://robots.thoughtbot.com/better-acceptance-tests-with-page-objects
 
 Bundler
 -------
