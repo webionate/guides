@@ -30,6 +30,8 @@ Formatting
   closing parenthesis on its own line.
 * If you break up a hash, keep the elements on their own lines and closing curly
   brace on its own line.
+* If you break up an array or hash, always add a trailing comma to the last
+  element of the collection. [Example][trailing comma example].
 * Indent continued lines two spaces.
 * Indent private methods equal to public methods.
 * If you break up a chain of method invocations, keep each method invocation on
@@ -45,6 +47,7 @@ Formatting
 * Use [uppercase for SQL key words and lowercase for SQL identifiers].
 
 [dot guideline example]: /style/samples/ruby.rb#L11
+[trailing comma example]: /style/samples/ruby.rb#L57
 [uppercase for SQL key words and lowercase for SQL identifiers]: http://www.postgresql.org/docs/9.2/static/sql-syntax-lexical.html#SQL-SYNTAX-IDENTIFIERS
 [Unix-style line endings]: http://unix.stackexchange.com/questions/23903/should-i-end-my-text-script-files-with-a-newline
 
