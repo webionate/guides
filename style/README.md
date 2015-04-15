@@ -37,7 +37,7 @@ Formatting
   [Example][dot guideline example].
 * Use 2 space indentation (no tabs).
 * Use an empty line between methods.
-* Use empty lines around multi-line blocks.
+* Use an empty line between multi-line blocks.
 * Use spaces around operators, except for unary operators, such as `!`.
 * Use spaces after commas, after colons and semicolons, around `{` and before
   `}`.
