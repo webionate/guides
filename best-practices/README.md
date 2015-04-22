@@ -117,6 +117,7 @@ Testing
 * Use a [Fake] to stub requests to external services.
 * Use integration tests to execute the entire app.
 * Use non-[SUT] methods in expectations when possible.
+* Use [isolated unit specs]: http://betterspecs.org/#single (specify only one behavior per example). 
 
 [dependency injection]: http://en.wikipedia.org/wiki/Dependency_injection
 [`Delayed::Job` matcher]: https://gist.github.com/3186463
@@ -126,6 +127,7 @@ Testing
 [SUT]: http://xunitpatterns.com/SUT.html
 [Let's Not]: http://robots.thoughtbot.com/lets-not
 [Better Acceptance Tests with Page Objects]: http://robots.thoughtbot.com/better-acceptance-tests-with-page-objects
+[Better Specs { rspec guidelines with ruby }]: http://betterspecs.org/
 
 Bundler
 -------
