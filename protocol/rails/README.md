@@ -54,13 +54,19 @@ Use [Foreman](https://github.com/ddollar/foreman) to run the app locally.
 
     foreman start
 
-It uses your `.env` file and `Procfile` to run processes just like Heroku's
-[Cedar](https://devcenter.heroku.com/articles/cedar/) stack.
+It uses your `.env` file and `Procfile` to run processes
+like Heroku's [Cedar](https://devcenter.heroku.com/articles/cedar/) stack.
+
 
 Git Protocol
 ------------
 
 Follow the normal [Git Protocol](/protocol/git).
+
+Product Review
+--------------
+
+Follow the normal [Product Review protocol](/protocol/product-review).
 
 Code Review
 -----------
@@ -92,3 +98,47 @@ View a list of new commits. View changed files.
 If necessary, add new environment variables.
 
     heroku config:add NEW_VARIABLE=value --remote staging
+
+Deploy to [Heroku](https://devcenter.heroku.com/articles/quickstart) staging.
+
+    git push staging
+
+If necessary, run migrations and restart the dynos.
+
+    heroku run rake db:migrate --remote staging
+    heroku restart --remote staging
+
+[Introspect] to make sure everything's ok.
+
+    watch heroku ps --remote staging
+
+Test the feature in browser.
+
+Deploy to production.
+
+    git fetch production
+    git log production/master..master
+    git diff --stat production/master
+    heroku config:add NEW_VARIABLE=value --remote production
+    git push production
+    heroku run rake db:migrate --remote production
+    heroku restart --remote production
+    watch heroku ps --remote production
+
+Watch logs and metrics dashboards.
+
+Close pull request and comment `Merged.`
+
+[Introspect]: http://blog.heroku.com/archives/2011/6/24/the_new_heroku_3_visibility_introspection/
+
+Set Up Production Environment
+-----------------------------
+
+* Make sure that your [`Procfile`] is set up to run Unicorn.
+* Make sure the PG Backups add-on is enabled.
+* Create a read-only [Heroku Follower] for your production database. If a Heroku
+  database outage occurs, Heroku can use the follower to get your app back up
+  and running faster.
+
+[Heroku Follower]: https://devcenter.heroku.com/articles/improving-heroku-postgres-availability-with-followers
+[`Procfile`]: https://devcenter.heroku.com/articles/procfile
