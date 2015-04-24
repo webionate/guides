@@ -3,8 +3,10 @@ Style
 
 A guide for programming in style.
 
-Use [Rubocop] and the config [path/to/config](link to config) to automatically
+Use [Rubocop](https://github.com/bbatsov/rubocop) and the config [rubocop.yml][rubocop sample] to automatically
 check your code for violations of the Ruby portions of this style guide.
+
+[rubocop sample]: /style/rubocop/.rubocop.yml
 
 Git
 ---
