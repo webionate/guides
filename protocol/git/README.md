@@ -42,12 +42,19 @@ When you've staged the changes, commit them.
 
 Write a [good commit message]. Example format:
 
-    Present-tense summary under 50 characters
-
-    * More information about commit (under 72 characters).
-    * More information about commit (under 72 characters).
-
-    http://project.management-system.com/ticket/123
+````
+# 50-character subject line
+#
+# 100-character wrapped longer description. This should answer:
+#
+# * Why was this change necessary?
+# * How does it address the problem?
+# * Are there any side effects?
+#
+# Include a link to the ticket, if any.
+# For Trello this could look like this:
+# [Trello #42](https://trello.com/to/trello/card)
+````
 
 If you've created more than one commit, use a rebase to squash them into
 cohesive commits with good messages:
